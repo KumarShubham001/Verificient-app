@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Verificient App</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+    <link href="./app.css" rel="stylesheet" type="text/css" />
+    <link href="../css/bulma.css" rel="stylesheet" type="text/css" />
+
+    <!-- icons -->
+    <link rel="stylesheet" href="../other/material-icons/material-icons.css">
+</head>
+
+<body style="background: white;">
+    <section id="osInfo">
+        <h1>OS Information</h1>
+        <lable for="osName"> OS Name: <span id="osName"></span></lable><br>
+        <lable for="osVersion"> OS Version: <span id="osVersion"></span></lable><br>
+        <lable for="osArch"> OS Architecture: <span id="osArch"></span></lable><br>
+        <lable for="osRam"> RAM: <span id="osRam"></span></lable><br>
+        <lable for="osHardDisk"> Hard Disk: <span id="osHardDisk"></span></lable><br>
+    </section>
+    <hr>
+    <section id="screenshot">
+        <button id="trigger" class="icon-button">
+            <div><i class="material-icons">center_focus_strong</i>&nbsp; Take screenshot</div>
+        </button>
+
+        <!-- after screenshot -->
+        <div id="afterScreenshot">
+            <img id="screenshot_preview" />
+            <p>Title: <span id="appTitle"></span></p>
+            <button id="saveScreenshotBtn" class="icon-button">
+                <div><i class="material-icons">get_app</i>&nbsp; Save</div>
+            </button>
+            <button id="cancelScreenshotBtn" class="icon-button" onclick="cancelScreenshot()">
+                <div><i class="material-icons">close</i>&nbsp; Cancel</div>
+            </button>
+        </div>
+    </section>
+
+    <!-- <script defer src="./screenshot.js"></script> -->
+    <script>
+        // declare the jquery
+        window.$ = window.jQuery = require('jquery');
+    </script>
+    <script defer src="./app.js"></script>
+    <script src="./full_screenshot.js"></script>
+    <script src="./processes.js"></script>
+    <script src="./usbHDMI.js"></script>
+    <script src="./disableRightClick.js"></script>
+
+</body>
+
+</html>

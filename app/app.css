@@ -1,0 +1,20 @@
+button.icon-button div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: fit-content;
+    height: 100%;
+}
+
+.icon-button div i {
+    font-size: 12px !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    line-height: unset !important;
+}
+
+img#screenshot_preview{
+    max-width: 640px;
+    margin: 10px 0px 5px;
+    display: block;
+}
